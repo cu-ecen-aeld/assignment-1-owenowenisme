@@ -1,3 +1,4 @@
+#!/bin/bash
 filedir=$1
 searchstr=$2
 num=0
@@ -11,7 +12,6 @@ if [ ! -d "$filedir" ]; then
     exit 1
 fi
 
-# Recursive iteration through filedir and its subdirectories
 while IFS= read -r -d '' file
 do
     count=$(grep -c "$searchstr" "$file")
